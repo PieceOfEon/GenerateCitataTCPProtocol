@@ -1,0 +1,29 @@
+﻿<Window x:Class="GenerateCitata.WindowServer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GenerateCitata"
+        mc:Ignorable="d"
+        Title="WindowServer" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Server IP Address:"/>
+        <TextBox Grid.Row="1" x:Name="ipAddressTextBox" Margin="5" Text="127.0.0.1"/>
+
+        <Label Grid.Row="2" Content="Server Port Number:"/>
+        <TextBox Grid.Row="3" x:Name="portTextBox" Margin="5" Text="8080"/>
+
+        <Button Grid.Row="4" x:Name="ConnectButton" Content="Start" Margin="5" Click="StartButton_Click"  />
+        <TextBox Margin="5" Grid.Row="5" x:Name="messagesTextBox2" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible"></TextBox>
+        <!-- Другие элементы управления и разметка формы -->
+    </Grid>
+</Window>
